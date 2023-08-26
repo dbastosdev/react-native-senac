@@ -1,11 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Card from './components/Card';
 
 export default function App() {
+  /**
+   * Aqui ficarão os dados do card de produtos
+   */
+  const products = [
+    {
+      name: "Beef Burger",
+      calories: 70,
+      price: 12.00
+    },
+    {
+      name: "Pancakes",
+      calories: 60,
+      price: 15.00
+    }
+  ]
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Card/>
     </View>
   );
 }

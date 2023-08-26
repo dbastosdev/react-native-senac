@@ -5,6 +5,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity, Image } from 'react-native';
+import Botao from './components/Botao';
 
 /**
  * Aqui fica de fato o componente.
@@ -21,10 +22,7 @@ export default function App() {
         
         <TextInput style={styles.input} placeholder='e-mail'/>
         <TextInput style={styles.input} placeholder='password' secureTextEntry />
-
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
-        </TouchableOpacity>
+        <Botao texto="entrar" />
       </View>
 
     </View>
@@ -63,19 +61,5 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 4,
     width: 200
-  },
-  button:{
-    backgroundColor: '#121A2C',
-    width: 200,
-    paddingHorizontal: 48,
-    paddingTop: 10,
-    paddingBottom: 10,
-    borderRadius: 4,
-    alignItems: 'center',
-    marginTop: 20
-  },
-  buttonText:{
-    color: '#FFBA26'
   }
-
 });
