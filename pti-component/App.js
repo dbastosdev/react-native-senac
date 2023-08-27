@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native';
-import Card from './components/Card';
+import { StyleSheet,FlatList, SafeAreaView, Text } from 'react-native';
+import CardList from './components/CardList';
 
 export default function App() {
   /**
@@ -7,20 +7,23 @@ export default function App() {
    */
   const products = [
     {
-      name: "Beef Burger",
+      id: 1,
+      name: 'Beef Burger',
       calories: 70,
-      price: 12.00
+      price: 12.00,
+      path: "../assets/1.png"
     },
     {
+      id: 2,
       name: "Pancakes",
       calories: 60,
-      price: 15.00
+      price: 15.00,
+      path: "../assets/2.png"
     }
   ]
+
   return (
-    <View style={styles.container}>
-      <Card/>
-    </View>
+    <CardList data={products}/>
   );
 }
 
@@ -30,5 +33,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
